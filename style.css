@@ -1,0 +1,74 @@
+/* cores background #0B1020 / #101728 / #132A13 / #1B1B2F */
+/* cores h1 #7CFFB2 / #B388FF / #8BE9FD */
+/* fontes titulos Poppins / Cinzel / Playfair Display*/
+/* fonte textos Inter / Nunito / Outfit*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+body#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+body{
+    margin: 0;
+    background: linear-gradient( 180deg, #0B1020, #1B1B2F);
+
+}
+ 
+h1{
+    color: #B388FF ;
+    font-family: 'Playfair Display', sans-serif;
+    text-shadow: 0 0 15px rgba(179, 136, 255, 0.4);
+}
+
+p{
+    margin-top: -10px;
+    margin-bottom: 30px;
+    color: #7CFFB2 ;
+    font-family: 'Outfit', sans-serif;
+}
+
+button{
+    background-color: #B388FF;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    color: #0B1020;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: #5d04f8;
+    color: #7CFFB2;
+}
+
+#humores{
+    margin-top: 30px;
+
+}
+
+.emoji{
+    font-size: 40px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s, ease;
+    display: inline-block;
+
+}
+.emoji:hover{
+    transform: scale(1.2);
+}
+
+#mensagem{
+    margin-top: 30px;
+    color: #8BE9FD;
+    font-size: 20px;
+    font-family: 'outfit', sans-serif;
+}
