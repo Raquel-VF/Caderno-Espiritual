@@ -5,6 +5,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
 
+@media (max-width:600px) {
+    #humores .emoji{
+        width: 80px;
+    }
+    #mensagem{
+        max-width: 500px;
+        font-size: 10px;
+        padding: 0 30px;
+    }
+}
+
 body#container{
     display: flex;
     flex-direction: column;
@@ -51,6 +62,10 @@ button:hover{
 
 #humores{
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
 
 }
 
@@ -61,6 +76,7 @@ button:hover{
     cursor: pointer;
     transition: 0.3s, ease;
     display: inline-block;
+    
 
 }
 .emoji:hover{
@@ -73,6 +89,7 @@ button:hover{
     font-size: 20px;
     font-family: 'outfit', sans-serif;
 
+    padding: 0 20px;
     animation: fade 0.5s ease;
 }
 
