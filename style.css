@@ -55,6 +55,7 @@ button:hover{
 }
 
 .emoji{
+    width: 100px;
     font-size: 40px;
     margin: 10px;
     cursor: pointer;
@@ -71,4 +72,41 @@ button:hover{
     color: #8BE9FD;
     font-size: 20px;
     font-family: 'outfit', sans-serif;
+
+    animation: fade 0.5s ease;
 }
+
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translatey(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+
+.controle-musica{
+    margin-top: 30px;
+    background-color: transparent;
+    border: 2px solid #7CFFB2;
+    color: #7CFFB2;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    font-size: 25px;
+
+    transition: 0.3s;
+}
+
+.controle-musica:hover{
+    background-color: #7CFFB2;
+    color: #0B1020;
+
+    transform: scale(1.1);
+}
+
