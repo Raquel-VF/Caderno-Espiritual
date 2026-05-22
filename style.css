@@ -7,7 +7,7 @@
 
 @media (max-width:600px) {
     #humores .emoji{
-        width: 80px;
+        width: 70px;
     }
     #mensagem{
         max-width: 500px;
@@ -127,3 +127,27 @@ button:hover{
     transform: scale(1.1);
 }
 
+#historico{
+    margin-top: 40px;
+    width: 80%;
+    max-width: 500px;
+}
+
+
+#texto-diario{
+    width: 80%;
+    max-width: 400px;
+    height:120px;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 15px;
+    border: none;
+    resize: none;
+    font-family: 'Outfit', sans-serif;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#salvar-diario{
+    margin-top: 15px;
+}
