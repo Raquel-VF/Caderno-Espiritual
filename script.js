@@ -40,8 +40,6 @@ botao.addEventListener("click", function () {
 
                 diario.innerHTML = `
                 <textarea id="texto-diario" placeholder="Escreva como foi seu dia..."</textarea>
-
-                <button id="salvar-diario">Salvar Registro</button>
                 `;
 
                 const salvarDiario = document.querySelector("#salvar-diario");
