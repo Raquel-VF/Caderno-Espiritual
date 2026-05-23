@@ -11,6 +11,16 @@ const controleMusica = document.querySelector("#controle-musica");
 const historico = document.querySelector("#historico");
 const data = new Date().toLocaleDateString("pt-BR");
 
+const frases = [
+     "Você merece descansar 🌙",
+
+    "Tudo floresce no tempo certo 🌱",
+
+    "Nem toda tempestade vem para destruir 🌧",
+
+    "Respire. Você chegou até aqui ✨"
+];
+
 let historicoEmocoes = [];
 const historicoSalvo = localStorage.getItem("historico");
 
@@ -39,34 +49,24 @@ botao.addEventListener("click", function () {
                 mensagem.innerHTML = "Hoje parece um dia leve ";
 
                 diario.innerHTML = `
-                <textarea id="texto-diario" placeholder="Escreva como foi seu dia..."</textarea>
+                <textarea id="texto-diario" placeholder="Escreva como foi seu dia..."></textarea>
+
+                <button id="salvar-diario">Salvar Registro</button>
                 `;
 
                 const salvarDiario = document.querySelector("#salvar-diario");
                 salvarDiario.addEventListener("click", function () {
                     const textoDiario = document.querySelector("#texto-diario").value;
 
-                    console.log(textoDiario);
+                    localStorage.setItem("diario", textoDiario);
+                    document.querySelector("#texto-diario").value = "";
+
+                    console.log(textoDiario)
+                    const frasesAleatoria = frases[Math.floor(Math.random() * frases.length)];
+                    mensagem.innerHTML = frasesAleatoria;
                 });
 
-                if(historicoSalvo){
-                    historicoEmocoes = JSON.parse(historicoSalvo);
-
-                    historicoEmocoes.forEach(function(emocao){
                 
-                // Adiciona o registro ao histórico
-                const registro = `
-                <div class="registro">
-
-                <p>${emoji.alt} . ${mensagem.innerHTML}</p>
-
-                <small>${data}</small>
-
-                </div>`;
-
-                historico.innerHTML += registro;
-            });
-            }
                 const emocao = {
                     humor: emoji.alt,
                     mensagem: mensagem.innerHTML,
@@ -103,7 +103,7 @@ botao.addEventListener("click", function () {
                 <p>${emoji.alt}</p>
                 <p>${mensagem.innerHTML}</p>
                 </div>`;
-                historico.innerHTML += registro;
+                
 
                 document.body.style.background = "linear-gradient(180deg, #3A506B, #1C2541)";
 
@@ -121,7 +121,7 @@ botao.addEventListener("click", function () {
                 <p>${emoji.alt}</p>
                 <p>${mensagem.innerHTML}</p>
                 </div>`;
-                historico.innerHTML += registro;
+                
 
                 document.body.style.background = "linear-gradient(180deg, #1B1B2F, #0B1020)";
 
